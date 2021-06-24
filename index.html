@@ -18,14 +18,6 @@
 </style>
     
 </head>
-<body>
-	<nav>
-		<ol>
-	        <li class="crumb"><a href="./home.html">Home</a></li>
-	        <li class="crumb"><a href="./profile.html">Profile</a></li>
-	        <li class="crumb"><a href="./about.html">About</a></li>
-	    </ol>
-	</nav>
 
 <button id="color" class='color'>My Favorite Color</button>
 <button id="place" class='place'>My Favorite Place</button>
@@ -87,7 +79,13 @@
 
 	</content>
 
-
+    <script>
+        let body = document.getElementsByClassName("body")
+        document.getElementById("color").onclick = () => {
+            body.style.color = "green";
+        }
+        
+    </script>
     <script src="profile.js"></script>
 
 </body>
