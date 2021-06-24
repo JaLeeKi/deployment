@@ -74,11 +74,14 @@
     
     </head>
 
-    <button id="color" class='color'>My Favorite Color</button>
-    <button id="place" class='place'>My Favorite Place</button>
-    <button id="ritual" class='ritual'>My Favorite Ritual</button>
-
-	<content>
+	<body id = "content">
+        <button id="color" class='color'>My Favorite Color</button>
+        <button id="place" class='place'>My Favorite Place</button>
+        <button id="ritual" class='ritual'>My Favorite Ritual</button>
+        <br>
+        <br>
+        <div id="fav-place"></div>
+        <div id="fav-ritual"></div>
 		<h1>JADE KIRKHAM</h1>
 
         <p>You are now browsing the Profile of our very first user! Shucks, aren't you special</p>
@@ -132,16 +135,22 @@
 
 		</form>
 
-	</content>
-
     <script>
-        let colorBtn = document.getElementById("color")
-        colorBtn.onclick = () => {
-            colorBtn.style = "red";
+        let content = document.getElementById("content")
+        document.getElementById("color").onclick = () => {
+            content.style.background = "red";
         }
+
+        document.getElementById('place').onclick = function() { 
+        document.getElementById('fav-place').innerHTML = '<img src="https://mariacollege.edu/wp-content/uploads/2018/03/mountaintop.jpg" width=auto height=500vh/>'
+      }  
+
+        document.getElementById('ritual').onclick = function() { 
+        document.getElementById('fav-ritual').innerHTML = 'We do not do rituals in this household, young man'
+      }  
         
     </script>
     <script src="profile.js"></script>
 
-</body>
+    </body>
 </html>
