@@ -135,8 +135,9 @@
 	</content>
 
     <script>
-        let body = document.getElementsByClassName("body")
-        document.getElementById("color").onclick.body.style = "green"
+        document.getElementById("color").onclick = () => {
+            console.log("It works!")
+        }
         
     </script>
     <script src="profile.js"></script>
